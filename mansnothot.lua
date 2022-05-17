@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Alprazolam - version 1.0", "Midnight")
+local Window = Library.CreateLib("Habitat - Update 2.0", "LightTheme")
 -- Global vars
 local localplayer = game.Players.LocalPlayer.Character.HumanoidRootPart
 
@@ -95,7 +95,7 @@ local Automation2 = Automation:NewSection("Bitcoin")
 
 Automation1:NewButton("Exchange Solaris", "One time auto exchange", function()
     print("Exchanged Solaris")
-    shop_location = CFrame.new(200,7,70)
+    shop_location = CFrame.new(215,7,90)
         
     prev_pos = localplayer.CFrame
     localplayer.CFrame = shop_location
@@ -123,7 +123,7 @@ end)
 function autoexchangesolaris()
     while getgenv().autosolaris do
         wait(1)
-        shop_location = CFrame.new(200,7,70)
+    shop_location = CFrame.new(215,7,90)
         solaris_amount = game:GetService("Players").LocalPlayer.leaderstats.Solaris.Value
         solaris_cash = game:GetService("Players").LocalPlayer.leaderstats.SCash.Value
         if solaris_amount >= getgenv().solaristhreshold * 1000000 then
@@ -141,7 +141,7 @@ end
 --
 Automation2:NewButton("Exchange Bitcoin", "One time auto exchange", function()
     print("Exchanged Bitcoin")
-    shop_location = CFrame.new(200,7,70)
+    shop_location = CFrame.new(215,7,90)
         
     prev_pos = localplayer.CFrame
     localplayer.CFrame = shop_location
@@ -169,7 +169,7 @@ end)
 function autoexchangebitcoin()
     while getgenv().autobitcoin do
         wait(1)
-        shop_location = CFrame.new(200,7,70)
+    shop_location = CFrame.new(215,7,90)
         bitcoin_amount = game:GetService("Players").LocalPlayer.leaderstats.BitCoins.Value
         bitcoin_cash = game:GetService("Players").LocalPlayer.leaderstats.Cash.Value
         if bitcoin_amount >= getgenv().bitcointhreshold * 1000000 then
@@ -188,7 +188,6 @@ end
 local Automation2 = Automation:NewSection("Other Automations")
 --[[
 Automation2:NewToggle("Best Algorithm (Doesn't work)", "Changes Algorithm to the best one", function(state)
-
     if state then
         print("Best Algorithm On")
     else
@@ -252,7 +251,7 @@ Teleport1:NewButton("Your Plot", "TPs you to your mining plot", function()
 end)
 
 Teleport1:NewButton("Shop", "TPs you to the shop", function()
-    shop_location = CFrame.new(200,7,70)
+    shop_location = CFrame.new(215,7,90)
     wait(0.1)
     localplayer.CFrame = shop_location
 end)
@@ -295,7 +294,7 @@ function check_afk()
         if next == false then
         repeat
             Humanoid.Jump = true
-            wait(500)
+            wait(120)
             next = true
         until next
           next = false
